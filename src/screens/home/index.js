@@ -3,11 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "../../components/sidebar";
 import { setClientToken } from "../../spotify";
 import Login from "../auth/login";
-import Favorites from "../favorites/index";
-import Feed from "../feed/index";
 import Library from "../library/index";
 import Player from "../player/index";
-import Trending from "../trending/index";
 import "./home.css";
 
 export default function Home() {
@@ -37,10 +34,7 @@ export default function Home() {
       <Sidebar />
     <Routes>
         <Route path="/" element ={<Library />} />
-        <Route path="/feed" element={<Feed />} />
-        <Route path="/trending" element={<Trending />} />
         <Route path="/player" element={<Player />} />
-        <Route path="/favorites" element={<Favorites />} />
   </Routes>
     </div>
   </Router>
