@@ -13,6 +13,8 @@ export default function AudioPlayer({
 
     const [isPlaying, setIsPlaying] = useState(false);
     const [trackProgress, setTrackProgress] = useState(0);
+    const [showVolume] = useState(false);
+    const [volume, setVolume] = useState(50);
     var audioSrc = total[currentIndex]?.track.preview_url;
     
     const audioRef = useRef(new Audio(total[0]?.track.preview_url));
@@ -40,8 +42,9 @@ export default function AudioPlayer({
     useEffect(() => {
         if(audioRef.current.src) {
             if(isPlaying) {
-            audioRef.current.play();
-            startTimer();
+            audioRef.current.play().then(() => {
+                startTimer();
+            }).catch((e) => console.error("Error playing audio:",e));
         } else {
             clearInterval(intervalRef.current);
             audioRef.current.pause();
@@ -61,16 +64,18 @@ export default function AudioPlayer({
     useEffect(() => {
         audioRef.current.pause();
         audioRef.current = new Audio(audioSrc);
-
+        audioRef.current.onloadeddata = () => {
         setTrackProgress(audioRef.current.currentTime);
 
         if(isReady.current) {
-            audioRef.current.play();
-            setIsPlaying(true);
-            startTimer();
+            audioRef.current.play().then(() => {
+                setIsPlaying(true);
+                startTimer();
+            }).catch((e) => console.error("Error playing audio:, e"));
         } else {
             isReady.current = true;
         }
+        };
     }, [currentIndex]);
 
     useEffect(() => {
@@ -79,6 +84,10 @@ export default function AudioPlayer({
             clearInterval(intervalRef.current);
         };
     }, []);
+
+    useEffect(() => {
+        audioRef.current.volume = volume / 100;
+    }, [volume])
 
     const handleNext = () => {
         if(currentIndex < total.length - 1){
@@ -107,7 +116,7 @@ export default function AudioPlayer({
                 isPlaying={true}
                 image={currentTrack?.album?.images[0]?.url}
                 size={300}
-                color="#C96850"
+                color="#33dd1d"
 
             />
         </div>
@@ -127,7 +136,11 @@ export default function AudioPlayer({
                     handlePrev={handlePrev}
                     total={total}
                 />
+
             </div>
+            <div className={`volume ${showVolume ? 'show' : ''}`}>
+            <input type="range" min={0} max={100} value={volume} onChange={e => setVolume(Number(e.target.value))} />
+        </div>
         </div>
     </div>
   );

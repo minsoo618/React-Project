@@ -15,6 +15,16 @@
     transition: all 0.2s ease-in-out;
 }
 
+.volumn-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
 .action-btn:hover {
     transform: scale(1.1);
 }
@@ -23,16 +33,16 @@
     width: 70px;
     height: 70px;
     border-radius: 30px;
-    background-color: #C96850;
+    background-color: #33dd1d;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    box-shadow: inset -4px -4px 10px #55291e, inset 4px 4px 10px 1px #ffae9a;
+    box-shadow: inset -4px -4px 10px #0d4206, inset 4px 4px 10px 1px #33dd1d;
 }
 
 .play-pause-btn.active {
-    box-shadow: inset -4px -4px 10px #ff8769, inset 4px 4px 10px 1px #753d30;
+    box-shadow: inset -4px -4px 10px #33dd1d, inset 4px 4px 10px 1px #0d4206;
   }
 
 .play-pause-btn:hover {

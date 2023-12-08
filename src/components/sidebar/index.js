@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./sidebar.css";
 import SidebarButton from "./sidebarButton";
-import { MdFavorite } from "react-icons/md";
-import { FaGripfire, FaPlay } from "react-icons/fa";
+import { FaPlay } from "react-icons/fa";
 import { FaSignOutAlt } from "react-icons/fa";
 import { IoLibrary } from "react-icons/io5";
-import { MdSpaceDashboard } from "react-icons/md";
 import apiClient from "../../spotify";
 
 export default function Sidebar() {

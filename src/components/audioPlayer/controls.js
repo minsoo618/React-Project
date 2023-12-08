@@ -3,6 +3,7 @@ import "./controls.css";
 import { IconContext } from "react-icons";
 import {IoPlaySkipBack, IoPlaySkipForward, IoPlay} from "react-icons/io5"
 import {FaPause} from "react-icons/fa";
+import { MdVolumeUp } from "react-icons/md";
 
 export default function Controls({
     isPlaying,
@@ -20,11 +21,13 @@ export default function Controls({
         onClick={() => setIsPlaying(!isPlaying)}>
             {isPlaying ? <FaPause /> : <IoPlay />}
         </div>
-        <div className="action-btn flex" onClick={handleNext}>
+        <div className="action-btn" onClick={handleNext}>
             <IoPlaySkipForward />
     </div>
+    
     </div>
     
   </IconContext.Provider>
+  
   );    
 }
