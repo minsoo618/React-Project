@@ -1,18 +1,18 @@
 .screen-container{
-    width: calc(100% - 100px);
-    height: 100%;
-    background-color: #1E2A3E;
-    border-radius: 30px;
-    background-color: #1E2A3F;
-opacity: 1;
-background-image: repeating-radial-gradient(
-    circle at center left,
-    transparent 0,
-    #1E2A3F 100px
+    width: calc(100% - 100px); /* sets the width of the container to be 100% of its parent's width minus 100px */
+    height: 100%; /* sets the height of the container to be 100% of its parent's height */
+    background-color: #1E2A3E; /* sets a base background color */
+    border-radius: 30px; /* rounds the corners of the container with a 30px radius */
+    background-color: #1E2A3F; /* overrides the previous backgroudn color with a slightly different shade */
+    opacity: 1; /* sets the opacity of the container to fully opaque */
+    background-image: repeating-radial-gradient(
+        circle at center left, /* defines the shape and position of the radial gradient */
+        transparent 0, /* inner circle of the gradient is transparent */
+        #1E2A3F 100px /* the gradient transtions to the color #1E2A3F at 100px */
     ),
-    repeating-linear-gradient( #23365655, #233656 );
+    repeating-linear-gradient( #23365655, #233656 ); /* overlays a linear gradient on top of the radial gradient */ 
 }
 
 .flex {
-    display: flex;
+    display: flex; /* enables flexbox layour for any element with the .flex class */
 }

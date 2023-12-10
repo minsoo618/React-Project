@@ -1,25 +1,25 @@
 .albuminfo-card{
-    margin-top: 20px;
-    width: 80%;
+    margin-top: 20px; /* adds space above the card */
+    width: 80%; /* sets the width of the card to 80% of its parent container */
 }
 
 .albuminfo-card p{
-    margin: 5px auto !important;
+    margin: 5px auto !important; /* sets the margin for all paragraph elements inside the card !important ensures this style overrides other margin settings */
 }
 
 .albumName-container{
-    width: 100%;
-    overflow: hidden;
-    font-size: 20px;
-    font-weight: 700;
-    color: #c3d0e3;
+    width: 100%; /* takes full width of its parent */
+    overflow: hidden; /* hides any overflowing content */
+    font-size: 20px; /* sets a large font size for visibility */
+    font-weight: 700; /* bold font weight for prominence */
+    color: #c3d0e3; /* sets the text color */
 }
 
 .marquee {
-    white-space: nowrap;
-    display: inline-block;
-    animation: marquee 12s linear infinite;
-    padding-left: 100%;
+    white-space: nowrap; /* prevents text wrapping */
+    display: inline-block; /* allows the block to behave like an inline element */
+    animation: marquee 12s linear infinite; /* applies a continous scrolling animation */
+    padding-left: 100%; /* padding to initially place the content offscreen to the right */
 }
 
 @keyframes marquee {
@@ -35,17 +35,17 @@
     font-size: 14px;
     font-weight: 500;
     color: #9AA9C2; 
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
+    overflow: hidden; /* hides any overflowing content */
+    text-overflow: ellipsis; /* adds an ellipsis to truncated text */
+    display: -webkit-box; /* uses webkit box model for line clamping */
+    -webkit-line-clamp: 2; /* limits content to 2 lines */
     line-clamp: 2;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: vertical; /* sets box orientation to vertical for line clamping */
 }
 
 .album-release {
-    font-size: 12px;
+    font-size: 12px; /* small font size for less prominent details */
     font-weight: 400;
-    color: #9AA9C2;
-    margin-top: 10px;
+    color: #9AA9C2; /* similar text color as .album-info for consistency */
+    margin-top: 10px; /* adds space above the release date */
 }

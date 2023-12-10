@@ -1,7 +1,7 @@
 .main-body{
-    height: 100vh;
-    width: 100vw;
-    background-color: #076122a1;
-    border-radius: 30px;
-    display: flex;
+    height: 100vh; /* sets the height of the container to 100% of the viewport height */
+    width: 100vw; /* sets the width of the container to 100% of the viewport width */
+    background-color: #076122a1; /* applies a background color with some transparency */
+    border-radius: 30px; /* rounds the corners of the container with a radius of 30 pixels */
+    display: flex; /* enables flexbox layout within this container */
 }

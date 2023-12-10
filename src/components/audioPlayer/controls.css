@@ -1,3 +1,4 @@
+/* styling for the wrapper that contains all control buttons */
 .controls-wrapper {
     width: 50%;
     margin: 0px;
@@ -5,16 +6,18 @@
     justify-content: space-between;
 }
 
+/* general styling for action buttons like previous and next */
 .action-btn {
     width: 50px;
     height: 50px;
     border-radius: 20px;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    cursor: pointer; /* changes cursor to pointer on hover indicating it's clickable */
+    transition: all 0.2s ease-in-out; /* smooth transition effect for hover states */
 }
 
+/* volume button */
 .volumn-btn {
     width: 50px;
     height: 50px;
@@ -25,10 +28,12 @@
     transition: all 0.2s ease-in-out;
 }
 
+/* hover effect for action buttons */
 .action-btn:hover {
     transform: scale(1.1);
 }
 
+/* styling for the play-pause button */
 .play-pause-btn {
     width: 70px;
     height: 70px;
@@ -41,10 +46,12 @@
     box-shadow: inset -4px -4px 10px #0d4206, inset 4px 4px 10px 1px #33dd1d;
 }
 
+/* additional styling when play-pause button is active */
 .play-pause-btn.active {
-    box-shadow: inset -4px -4px 10px #33dd1d, inset 4px 4px 10px 1px #0d4206;
+    box-shadow: inset -4px -4px 10px #33dd1d, inset 4px 4px 10px 1px #0d4206; /* changes shadow colors when active */
   }
 
+  /* hover effect for play-pause button */
 .play-pause-btn:hover {
     transform: scale(1.1);
 }

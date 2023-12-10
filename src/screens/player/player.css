@@ -1,6 +1,6 @@
 .left-player-body{
-    width: 68%;
-    margin-right: 2%;
+    width: 68%; /* sets the width of the left section of the player to 68% of its parent container */
+    margin-right: 2%; /* adds a margin to the right of this section, creating a gap between it and the next element */
     height: 100%;
 }
 
@@ -8,6 +8,6 @@
     width: 30%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: column; /* arranges flex items in a column, vertically stacked */
+    justify-content: space-between; /* distributes the items inside evenly with space between them */
 }

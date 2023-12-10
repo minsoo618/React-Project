@@ -3,23 +3,26 @@
     height: 54px;
     --boxSize: 4px;
     --gutter: 8px;
-    width: calc((var(--boxSize) + var(--gutter)) * 13);
+    width: calc((var(--boxSize) + var(--gutter)) * 13); /* calculates the width based on the number of boxes and gutter */
 }
 
 .box{
     transform: scale(.4);
     height: 100%;
-    width: var(--boxSize);
-    background: linear-gradient(40deg, #364562 20%, #33dd1d 100%) no-repeat;
-    border-radius: 18px;
+    width: var(--boxSize); /* width is set using the custom property */
+    background: linear-gradient(40deg, #364562 20%, #33dd1d 100%) no-repeat; /* gradient background for each box */
+    border-radius: 18px; /* rounded corners for aesthetic effect */
 }
 
 .box.active{
     animation-duration: 1.2s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; /* smooth animation timing */
+    animation-iteration-count: infinite; /* animation repeats indefinitely */
 }
 
+/* three keyframe animations (quiet, normal loud) define the different scaling transformations
+at various stages (25%, 50%, 75%). Each keyframe animation varies the scale of the boxes at different intervals,
+creating a visual effect of bars moving up and down like a sound wave */
 .box1{
     animation-name: quiet;
 }

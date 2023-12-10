@@ -1,3 +1,4 @@
+/* styling for sidebar */
 .sidebar-container{
     width: 100px;
     height: 100%;
@@ -10,6 +11,6 @@
 .profile-img{
     width: 50px;
     height: 50px;
-    border-radius: 20px;
-    margin-top: 20px;
+    border-radius: 20px; /* rounds the corners of the image to make it more circular */
+    margin-top: 20px; /* adds a top margin of 20 pixels to position it away from the top edge of the sidebar */
 }

@@ -1,24 +1,26 @@
 circle{
-    transition: all 1s ease-in-out;
-    transform: rotate(93deg);
-    transform-origin: 50% 50%;
+    transition: all 1s ease-in-out; /* smooth transition effect for any changes, lasting 1 second */
+    transform: rotate(93deg); /* initially rotates the circle by 93 degrees */
+    transform-origin: 50% 50%; /* the rotation axis is centered in the middle of the circle */
 }
 
 image.active{
-    animation: rotation 30s infinite linear;
-    transform-origin: 50% 50%;
+    animation: rotation 30s infinite linear; /* applies a continuos rotation animation */
+    transform-origin: 50% 50%; /* ensures the image rotates around its center */
 }
 
+/* styles for the container of the progress circle */
 .progress-circle {
    justify-content: center;
    align-items: center; 
 }
 
+/* defines the rotation animation */
 @keyframes rotation {
     from {
-        transform: rotate(0deg);
+        transform: rotate(0deg); /* starts the animation with the image not rotated */
     }
     to {
-        transform: rotate(359deg);
+        transform: rotate(359deg); /* ends the animation with the image nearly completing a full rotation */
     }
 }

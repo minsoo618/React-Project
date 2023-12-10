@@ -1,22 +1,22 @@
 .albumimage {
     width: 80%;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
+    align-items: center; /* centers child elements vertically */
+    justify-content: center; /* centers child elements horizontally */
+    position: relative; /* positions the album image container relative to its normal position */
+    z-index: 1; /* sets the stack order; ensures it's above other elements with a lower z-index */
 }
 
 .albumimage img{
-    border-radius: 30px;
+    border-radius: 30px; /* rounds the corners of the image */
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 1; /* ensures that the image maintains a square aspect ratio */
 }
 
 .albumimage-shadow{
-    -webkit-filter: blur(10px);
-    filter: blur(10px);
+    -webkit-filter: blur(10px); /* applies a blur effect for Webkit browsers */
+    filter: blur(10px); /* applies a blur effect to create a shadow-like appearance */
     width: 90%;
-    position: absolute;
-    z-index: -1;
-    top: 20px;
+    position: absolute; /* positions the shadow absolutely relative to its parent .albumimage */
+    z-index: -1; /* places the shadow behind the actual image */
+    top: 20px; /* positions the shadow slightly below the actual image */
 }

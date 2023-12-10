@@ -1,32 +1,36 @@
 import React from 'react';
 import "./progressCircle.css";
 
+// circular progress indicator to show the current playback progress
 const Circle = ({color, percentage, size, strokeWidth}) => {
+    // radius of the circle
     const radius = size/2 - 10;
+    // circumference
     const circ = 2 * Math.PI * radius - 20;
+    // length of the stroke to show percentage completion
     const strokePct = ((100 - Math.round(percentage)) * circ) / 100;
 
     return (
         <circle
             r={radius}
-            cx="50%"
-            cy="50%"
-            fill="transparent"
-            stroke={strokePct !== circ ? color : ""}
+            cx="50%" // center x of the circle
+            cy="50%" // center y
+            fill="transparent" // circle is only an outline with no fill
+            stroke={strokePct !== circ ? color : ""} // color of the circle's stroke
             strokeWidth={strokeWidth}
-            strokeDasharray={circ}
-            strokeDashoffset={percentage ? strokePct : 0}
-            strokeLinecap="round"
+            strokeDasharray={circ} // creates a dashed line with length equal to the circle's circumference
+            strokeDashoffset={percentage ? strokePct : 0} // offset for the dash to create the progress effect
+            strokeLinecap="round" // rounded stroke ends
             ></circle>
         );
 };
 
 export default function ProgressCircle({
-    percentage,
-    isPlaying,
-    size,
-    color,
-    image,
+    percentage, // percentage of completion
+    isPlaying, // if the media is playing
+    size, // size of the SVG element
+    color, // color of the progress stroke
+    image, // URL of the image to be displayed inside the circle
 }) {
 
   return (
@@ -42,6 +46,7 @@ export default function ProgressCircle({
                 />
             </g>
             <defs>
+                {/* Defining clipping paths for circular images */}
                 <clipPath id="myCircle">
                     <circle cx="50%" cy="50%" r={size/2 - 30} fill="#FFFFFF" />
                 </clipPath>
@@ -49,6 +54,7 @@ export default function ProgressCircle({
                 <circle cx="50%" cy="50%" r={size/2 - 100} fill="#FFFFFF" />
                 </clipPath>
             </defs>
+            {/* images inside the circles */}
             <image
             className={isPlaying ? "active" : ""} 
             x={30} 

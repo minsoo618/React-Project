@@ -1,33 +1,33 @@
 a {
-    text-decoration: none !important;
+    text-decoration: none !important; /* removes text decoration like underlines from all anchor tags and ensures it's not overridden */
 }
 
 .btn-body{
-    height: 80px;
+    height: 80px; /* sets the button height to 80 pixels */
     width: 80px;
-    border-radius: 20px;
-    color: #83e676;
+    border-radius: 20px; /* rounds the corners with a radius of 20 pixels */
+    color: #83e676; /* sets the text/icon color to a light green */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 5px auto;
+    margin: 5px auto; /* adds margin around the button and centers it horizontally */
     transition: all 0.2s ease;
     background-color: rgba(76, 10, 182, 0);
 }
 
 .btn-body.active{
-    background-color: rgb(28, 143, 57);
-    color: #fff;
-    transform: scale(1.05);
+    background-color: rgb(28, 143, 57); /* changs background color to a darker green when active */
+    color: #fff; /* changes text/icon color to white when active */
+    transform: scale(1.05); /* slightly enlarges the button to 105% of its size when active */
 }
 
 .btn-body:hover{
-    color: #fff;
+    color: #fff; /* changes the text/icon color to white on hover */
 }
 
 .btn-title{
-    margin: 4px auto;
-    font-weight: 600;
-    font-size: 14px;
+    margin: 4px auto; /* adds op and bottom margin and centers the title horizontally */
+    font-weight: 600; /* sets the font weight to semi-bold */
+    font-size: 14px; /* sets the font size to 14 pixels */
 }

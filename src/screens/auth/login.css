@@ -1,29 +1,29 @@
 .login-page {
-    background-color: #1f1f1f;
-    height: 100vh;
+    background-color: #1f1f1f; /* dark background color */
+    height: 100vh; /* full viewport height */
     width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    flex-direction: column;
+    display: flex; /* enables flexbox layout */
+    align-items: center; /* centers items vertically */
+    justify-content: center; /* centers items horizontally */
+    overflow: hidden; /* hides any overflowing content */
+    flex-direction: column; /* arranges items in a vertical column */
   }
   
   .logo {
-    width: 30%;
+    width: 30%; /* sets the width of the logo to 30% of its container */
   }
   
   .login-btn {
-    width: 200px;
-    padding: 15px 0px;
-    text-align: center;
+    width: 200px; /* fixed width of the login button */
+    padding: 15px 0px; /* vertical padding for the button */
+    text-align: center; /* centers the text inside the button */
     background-color: #fefefe;
     border-radius: 50px;
     color: #1f1f1f;
-    font-weight: 600;
-    margin-top: 20%;
+    font-weight: 600; /* semi-bold font weight */
+    margin-top: 20%; /* top margin to separate the button from the logo */
   }
   
   a {
-    text-decoration: none;
+    text-decoration: none; /* removes underlines from all anchor tags */
   }

@@ -1,46 +1,53 @@
+/* general styling for the entire audio player container */
 .player-body{
     width: 100%;
     height: 40%;
-    margin: 3% 0%;
+    margin: 3% 0%; /* vertical margins of 3% and no horizontal margins */
 }
 
+/* styling for the left section of the audio player */
 .player-left-body{
     width: 37%;
 }
 
+/* right section of the audio player */
 .player-right-body{
     width: 63%;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* arranges child elements in a vertical column */
+    justify-content: space-between; /* spaces children evenly with space between them */
+    align-items: center; /* centers children horizontally in the middle */
 }
 
+/* styling for the song title */
 .song-title {
     text-align: center;
     font-size: 58px;
     font-weight: bold;
     margin: 0px;
-    color: #C4D0E3;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-ine-clamp: 2;
-    line-clamp: 2;
-    -webkit-box-orient: vertical;
+    color: #C4D0E3; /* light blue color for the text */
+    overflow: hidden; /* hides overflowed text */
+    text-overflow: ellipsis; /* adds ellipsis if text overflows */
+    display: -webkit-box; /* specific display type for line clamping */
+    -webkit-ine-clamp: 2; /* limits text to 2 lines */
+    line-clamp: 2; /* standard line clamping for non-Webkit browsers */
+    -webkit-box-orient: vertical; /* orient text vertically for line clamping */
 }
 
+/* styling for the artist's name */
 .song-artist {
-    color: #9AA9C2;
+    color: #9AA9C2; /* gray-blue color for artist text */
     font-size: 14px;
     font-weight: 500;
 }
 
+/* styling for the bottom section of the right-side player */
 .player-right-bottom {
     align-items: center;
     width: 100%;
     flex-direction: column;
 }
 
+/* styling for the song duration section */
 .song-duration {
     width: 50%;
     justify-content: space-between;
@@ -48,6 +55,7 @@
     align-items: center;
 }
 
+/* styling for the duration text */
 .duration {
     font-size: 20px;
     font-weight: 700;
